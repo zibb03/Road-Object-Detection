@@ -27,6 +27,7 @@ for i in range(12):
 
             # print(label['category'], label['box2d'])
             cv2.rectangle(image, pt1=(int(x1), int(y1)), pt2=(int(x2), int(y2)), thickness=2, color=(0, 0, 255), lineType=cv2.LINE_AA)
+            # print(l['category'])
             cv2.putText(image, l['category'], org=(int(x1), int(y1)), fontFace=cv2.FONT_HERSHEY_SIMPLEX,
                         fontScale=0.8, color=(255, 255, 255), thickness=2, lineType=cv2.LINE_AA)
 

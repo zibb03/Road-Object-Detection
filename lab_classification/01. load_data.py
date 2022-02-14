@@ -8,7 +8,6 @@ train_dataset = tf.keras.preprocessing.image_dataset_from_directory(
     # none 일때는 번호로 나타남
     # ex) 2이면 bus 를 나타냄
     label_mode='categorical'
-
 )
 
 data = train_dataset.take(1)

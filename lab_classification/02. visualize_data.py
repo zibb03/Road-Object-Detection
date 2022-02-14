@@ -6,7 +6,6 @@ train_dataset = tf.keras.preprocessing.image_dataset_from_directory(
     '../classification_data/',
     image_size=(224, 224),
     label_mode='categorical'
-
 )
 
 data = train_dataset.take(1)

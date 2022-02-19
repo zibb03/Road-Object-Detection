@@ -1,5 +1,4 @@
 import os
-
 import tensorflow as tf
 import numpy as np
 
@@ -13,6 +12,8 @@ print(image.shape)
 # np.array()를 쓰는 이유 -> 모델에 얼마 만큼의 데이터를 가지고 있는지 알려주기 위하여
 data = np.array([image])
 print(data.shape)
+
+# print(type(data))
 
 predict = model.predict(data)
 print(predict)

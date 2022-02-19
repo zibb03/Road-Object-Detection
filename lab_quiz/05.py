@@ -6,8 +6,10 @@ import cv2
 category = str(input())
 number = str(input())
 
-model = tf.keras.models.load_model('../models/mymodel.h5')
+# model = tf.keras.models.load_model('../models/mymodel.h5')
+model = tf.keras.models.load_model('../models/classification_model_trained.h5')
 
+# print("../classification_data/" + category + "/" + number + ".jpg")
 image = cv2.imread("../classification_data/" + category + "/" + number + ".jpg")
 print(image.shape)
 

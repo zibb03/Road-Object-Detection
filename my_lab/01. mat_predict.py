@@ -3,7 +3,7 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
 
-model = tf.keras.models.load_model('../models/mymodel.h5')
+model = tf.keras.models.load_model('../models/classification_model_trained.h5')
 
 class_names = os.listdir('../classification_data')
 
@@ -27,11 +27,10 @@ for images, labels in data:
         # 이미지 자료형이 실수로 되어 있으면 에러가 남. 이에 정수형으로 바꿔주는 과정
         plt.imshow(images[i].numpy().astype('uint8'))
 
-        print(type(images[i]))
-        print(type(images[i].numpy()))
-        print(type(images[i].numpy().astype('uint8')))
+        predict_data = np.array([images[i].numpy()])
+        # print(predict_data.shape)
 
-        predict = model.predict(images[i].numpy())
+        predict = model.predict(predict_data)
 
         index = np.argmax(predict)
 

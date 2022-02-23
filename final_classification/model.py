@@ -4,27 +4,27 @@ class Model:
 
     # 데이터 불러오기
     def load_data(self):
-        pass
+        print('데이터 불러오기')
 
     # 모델 구축
     def build(self):
-        pass
+        print('모델 구축')
 
     # 모델 학습
     def train(self):
-        pass
+        print('모델 학습')
 
     # 예측
     def predict(self):
-        pass
+        print('예측')
 
     # 모델 저장
     def save(self):
-        pass
+        print('save')
 
     # 모델 불러오기
     def load(self):
-        pass
+        print('load')
 
 if __name__ == '__main__':
     model = Model()

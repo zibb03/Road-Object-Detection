@@ -25,16 +25,16 @@ model.compile(
     loss=tf.keras.losses.CategoricalCrossentropy(from_logits=True),
     # optimizer 함수는 loss 값을 줄여들도록 튜닝해주는것
     # optimizer=tf.keras.optimizers.SGD(learning_rate=learning_rate),
-    # optimizer=tf.keras.optimizers.RMSprop(learning_rate=learning_rate),
+    optimizer=tf.keras.optimizers.RMSprop(learning_rate=learning_rate),
     # optimizer=tf.keras.optimizers.Adagrad(learning_rate=learning_rate),
-    optimizer=tf.keras.optimizers.Adam(learning_rate=learning_rate),
+    # optimizer=tf.keras.optimizers.Adam(learning_rate=learning_rate),
     # 정확도록 보여주도록 하는 옵션
     metrics=['accuracy']
 )
 
 # optimizer 함수가 몇번 호출되는지 결정하는 epoch
 # 모델 입력 넣어서 학습
-model.fit(train_dataset, epochs=50, callbacks=[tensorboard])
+model.fit(train_dataset, epochs=100, callbacks=[tensorboard])
 
 if not os.path.exists('../models'):
     os.mkdir('../models')

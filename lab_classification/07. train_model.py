@@ -26,7 +26,7 @@ model.compile(
 
 # optimizer 함수가 몇번 호출되는지 결정하는 epoch
 # 모델 입력 넣어서 학습
-model.fit(train_dataset, epochs=5)
+model.fit(train_dataset, epochs=50)
 
 if not os.path.exists('../models'):
     os.mkdir('../models')

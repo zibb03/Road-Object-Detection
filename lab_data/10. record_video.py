@@ -12,7 +12,7 @@ fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
 if not os.path.exists('../outputs'):
     os.mkdir('../outputs')
 
-out = cv2.VideoWriter('../outputs/output.mp4', fourcc, fps, (width, height))
+out = cv2.VideoWriter('../outputs/output.wmv', fourcc, fps, (width, height))
 
 while cap.isOpened():
     ret, image = cap.read()

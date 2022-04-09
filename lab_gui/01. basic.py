@@ -13,3 +13,4 @@ if __name__ == '__main__':
     classification_ai = ClassificationAI()
     classification_ai.show()
     sys.exit(app.exec())
+
